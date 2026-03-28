@@ -157,7 +157,6 @@ nav.scrolled {
   0%   { opacity: 1; filter: brightness(1) saturate(1); }
   100% { opacity: .85; filter: brightness(1.25) saturate(1.15); }
 }
-/* Simulated illumination wash — the designed color source effect */
 .hero-art::after {
   content: ''; position: absolute; inset: 0;
   background: repeating-linear-gradient(
@@ -176,8 +175,6 @@ nav.scrolled {
 .hero-art-label .art-size {
   font-size: 11px; color: var(--txt-dim); letter-spacing: .14em; text-transform: uppercase;
 }
-
-/* Inaugural badge */
 .hero-art-badge {
   position: absolute; top: 20px; right: 20px;
   font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
@@ -295,8 +292,6 @@ h2 {
   color: var(--gold-lt); line-height: 1.5;
   border-left: 2px solid var(--gold-dk); padding-left: 24px; margin: 32px 0;
 }
-
-/* Inaugural format callout */
 .inaugural-callout {
   background: rgba(201,169,110,.06);
   border: 1px solid var(--gold-dk);
@@ -356,8 +351,6 @@ h2 {
 }
 .edition-card.large .edition-image { aspect-ratio: 16/9; }
 .edition-card:hover .edition-image { transform: scale(1.04); }
-
-/* Simulated Flective surface — richer colors reflecting the designed illumination */
 .edition-image::before {
   content: ''; position: absolute; inset: 0;
   background: var(--gradient);
@@ -367,20 +360,17 @@ h2 {
   0%   { opacity: 1; filter: brightness(1) saturate(1); }
   100% { opacity: .88; filter: brightness(1.2) saturate(1.15) hue-rotate(5deg); }
 }
-/* Simulated smooth viewer-transition effect on hover */
 .edition-image::after {
   content: ''; position: absolute; inset: 0;
   background: linear-gradient(135deg, rgba(255,255,255,.06) 0%, transparent 60%);
   opacity: 0; transition: opacity .8s ease;
 }
 .edition-card:hover .edition-image::after { opacity: 1; }
-
 .edition-card:nth-child(1) .edition-image { --gradient: radial-gradient(ellipse 80% 60% at 35% 40%, rgba(180,210,240,.32), rgba(220,170,90,.18), #131310); }
 .edition-card:nth-child(2) .edition-image { --gradient: radial-gradient(ellipse 60% 80% at 70% 30%, rgba(240,220,170,.28), rgba(180,140,80,.14), #111109); }
 .edition-card:nth-child(3) .edition-image { --gradient: radial-gradient(ellipse 100% 50% at 50% 60%, rgba(160,190,220,.24), rgba(200,160,100,.16), #121210); }
 .edition-card:nth-child(4) .edition-image { --gradient: radial-gradient(ellipse 70% 70% at 40% 50%, rgba(230,200,140,.22), rgba(160,120,70,.12), #111109); }
 .edition-card:nth-child(5) .edition-image { --gradient: radial-gradient(ellipse 90% 60% at 60% 40%, rgba(200,220,240,.2), rgba(180,160,120,.14), #121212); }
-
 .edition-image-label {
   position: absolute; top: 16px; left: 16px;
   font-size: 10px; letter-spacing: .2em; text-transform: uppercase;
@@ -393,6 +383,10 @@ h2 {
 .edition-title {
   font-family: var(--serif); font-size: 20px; font-weight: 400;
   color: var(--cream); letter-spacing: .02em; margin-bottom: 4px;
+}
+.edition-note {
+  font-family: var(--serif); font-size: 13px; font-style: italic;
+  color: var(--txt-dim); line-height: 1.55; margin-top: 6px;
 }
 .edition-meta { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 14px; }
 .edition-details {
@@ -603,13 +597,14 @@ h1 { animation: slidein .9s .4s both; }
     <div class="hero-overline">Reflective Fine Art Editions</div>
     <h1>Light<br>made<br><em>permanent.</em></h1>
     <p class="hero-sub">
-      Pixel Crystal presents Flective editions — large-format artworks
-      achieving the world's highest dynamic range and fullest color fidelity
-      through a precision-designed illumination system. No screen. No compromise.
+      Pixel Crystal presents Flective editions — large-format works formed
+      in polished aluminum, using a purpose-designed illumination system
+      and computationally oriented mirror surfaces to construct images of
+      unusual depth, color, and presence.
     </p>
     <div class="hero-cta-group">
       <a href="#editions" class="btn-primary">View Editions</a>
-      <a href="#medium" class="btn-ghost">How it works <span class="arrow">→</span></a>
+      <a href="#medium" class="btn-ghost">The medium <span class="arrow">→</span></a>
     </div>
   </div>
   <div class="hero-scroll">
@@ -623,22 +618,22 @@ h1 { animation: slidein .9s .4s both; }
   <div class="cap-item reveal">
     <div class="cap-number">∞</div>
     <div class="cap-label">Dynamic Range</div>
-    <div class="cap-desc">Unlimited. Exceeds every print, display, and photographic medium ever made.</div>
+    <div class="cap-desc">Determined by the illumination source rather than ink, pixel, or chemistry.</div>
   </div>
   <div class="cap-item reveal" style="transition-delay:.1s">
     <div class="cap-number">Full</div>
     <div class="cap-label">Color Fidelity</div>
-    <div class="cap-desc">A custom-designed color source delivers every hue with complete precision.</div>
+    <div class="cap-desc">A custom-designed color source, calibrated to the space, feeds the surface directly.</div>
   </div>
   <div class="cap-item reveal" style="transition-delay:.2s">
     <div class="cap-number">100</div>
     <div class="cap-label">Editions per Image</div>
-    <div class="cap-desc">Each image strictly limited to 100 pieces across all formats. Permanent.</div>
+    <div class="cap-desc">Each image is limited to 100 pieces across all formats. Numbered and registered.</div>
   </div>
   <div class="cap-item reveal" style="transition-delay:.3s">
     <div class="cap-number">7</div>
     <div class="cap-label">Issued Patents</div>
-    <div class="cap-desc">The sole company with IP rights to this category of imaging technology.</div>
+    <div class="cap-desc">Seven US patents protect the computational methods underlying this medium.</div>
   </div>
 </div>
 
@@ -646,31 +641,34 @@ h1 { animation: slidein .9s .4s both; }
 <section class="medium-section" id="medium">
   <div class="medium-text reveal">
     <div class="section-overline">Computational Reflective Imaging</div>
-    <h2>Not a print.<br>Not a screen.<br><em>A third thing.</em></h2>
+    <h2>Neither print<br>nor screen.<br><em>A distinct category.</em></h2>
     <p>
-      Every display you have ever encountered either generates light — screens,
-      projectors, LEDs — or absorbs it, as pigment and ink do. Pixel Crystal
-      artworks do neither. They redirect it.
+      Every image-bearing surface you have encountered either generates light —
+      screens, projectors, LEDs — or absorbs it, as pigment and ink do.
+      Pixel Crystal artworks do neither. They redirect it.
     </p>
     <p>
-      Each edition is paired with a custom-designed color source — concealed
-      behind or above the viewing position — that feeds the surface with a
-      precision-tuned light field. Thousands of microscopic mirror pixels,
-      each tilted by computational design, redirect that light toward the
-      viewer to construct an image of extraordinary color depth and luminance.
-      The surface itself requires no power, no electronics, no maintenance — ever.
+      Each edition is paired with a custom-designed color source — positioned
+      behind or above the viewing position and integrated discreetly into the
+      installation — that feeds the surface with a characterized light field.
+      Thousands of mirror pixels, each tilted by computational design, redirect
+      that light toward the viewer to construct an image with a depth and
+      luminance that conventional media do not reach by the same means.
+      The surface itself is entirely passive: no electronics, no power draw,
+      no components subject to failure.
     </p>
     <div class="pullquote">
-      "The light source is designed. The image is permanent. What arrives at the eye
-      is something neither print nor screen has ever delivered."
+      "The light source is designed. The image is permanent.
+      What arrives at the eye is unlike what any print or screen produces."
     </div>
 
     <div class="inaugural-callout">
       <div class="ic-label">Inaugural Format — Series I</div>
-      <p>The debut edition is optimized for color richness and a single elegant
-      behavior: a smooth, luminous fade as the viewer moves — the image
-      transitioning through depth and tone as naturally as light itself shifts.
-      Interactive and multi-image effects are reserved for future tiers.</p>
+      <p>The debut edition is designed for color richness and a single
+      considered behavior: a smooth, luminous shift as the viewer moves —
+      the image transitioning through depth and tone as naturally as light
+      itself changes through the day. Effects that respond to viewer
+      interruption are reserved for future series.</p>
     </div>
   </div>
 
@@ -678,29 +676,29 @@ h1 { animation: slidein .9s .4s both; }
     <div class="spec-row">
       <div class="spec-name">Dynamic Range</div>
       <div>
-        <div class="spec-value highlight">Unlimited</div>
-        <div class="spec-note">Bounded by the designed illumination source, not by technology</div>
+        <div class="spec-value highlight">Illumination-bounded</div>
+        <div class="spec-note">Set by the designed light source, not by the limits of ink or pixel</div>
       </div>
     </div>
     <div class="spec-row">
       <div class="spec-name">Color Fidelity</div>
       <div>
-        <div class="spec-value highlight">Full gamut — custom-designed</div>
-        <div class="spec-note">Dedicated color source provides complete, accurate spectral control</div>
+        <div class="spec-value highlight">Custom-designed source</div>
+        <div class="spec-note">Dedicated illumination calibrated to the space and image</div>
       </div>
     </div>
     <div class="spec-row">
       <div class="spec-name">Illumination System</div>
       <div>
-        <div class="spec-value">Custom — concealed at installation</div>
-        <div class="spec-note">Positioned behind or above viewer; artistically integrated or hidden</div>
+        <div class="spec-value">Site-integrated — concealed</div>
+        <div class="spec-note">Positioned behind or above the viewer; designed into the installation</div>
       </div>
     </div>
     <div class="spec-row">
       <div class="spec-name">Surface Power</div>
       <div>
         <div class="spec-value highlight">None</div>
-        <div class="spec-note">The artwork itself is entirely passive — no electronics, no wiring</div>
+        <div class="spec-note">The artwork surface is entirely passive — no electronics, no wiring</div>
       </div>
     </div>
     <div class="spec-row">
@@ -714,28 +712,28 @@ h1 { animation: slidein .9s .4s both; }
       <div class="spec-name">Viewer Behavior — Series I</div>
       <div>
         <div class="spec-value">Smooth luminous transition</div>
-        <div class="spec-note">Elegant fade as viewer position changes — optimized for depth and color</div>
+        <div class="spec-note">Image shifts through depth and tone as viewing position changes</div>
       </div>
     </div>
     <div class="spec-row">
       <div class="spec-name">Interactive Effects</div>
       <div>
-        <div class="spec-value">Future tiers</div>
-        <div class="spec-note">Viewer-interruptible and multi-image variants available in later series</div>
+        <div class="spec-value">Future series</div>
+        <div class="spec-note">Viewer-responsive and multi-image variants in development</div>
       </div>
     </div>
     <div class="spec-row">
       <div class="spec-name">Longevity</div>
       <div>
         <div class="spec-value highlight">Architectural timescale</div>
-        <div class="spec-note">No degradation, no software, no updates — ever</div>
+        <div class="spec-note">No software, no components, no scheduled maintenance</div>
       </div>
     </div>
     <div class="spec-row">
       <div class="spec-name">IP Protection</div>
       <div>
         <div class="spec-value">7 issued US patents</div>
-        <div class="spec-note">Sole exclusive rights to this imaging category worldwide</div>
+        <div class="spec-note">Computational methods protected across the core imaging category</div>
       </div>
     </div>
   </div>
@@ -751,147 +749,161 @@ h1 { animation: slidein .9s .4s both; }
     <a href="#inquire" class="view-all">Inquire about custom commissions →</a>
   </div>
   <div class="editions-grid">
+
     <div class="edition-card large reveal">
       <div class="edition-image">
         <div class="edition-image-label">Flective Edition · Bay Bridge Series</div>
       </div>
       <div class="edition-info">
         <div class="edition-title">Bay Bridge — Nocturne</div>
+        <div class="edition-note">Steel and water at last light — a subject that has always asked for more luminance than print can hold.</div>
         <div class="edition-meta">
           <div class="edition-details">Series I · Edition of 100<br>72 × 48 in · Polished Aluminum</div>
           <div class="edition-price"><div class="from">From</div>$18,000</div>
         </div>
       </div>
     </div>
+
     <div class="edition-card reveal" style="transition-delay:.15s">
       <div class="edition-image">
         <div class="edition-image-label">Flective Edition · Portrait Series</div>
       </div>
       <div class="edition-info">
         <div class="edition-title">Eye Study — Cynthia</div>
+        <div class="edition-note">The eye is the medium's most demanding subject. Detail and depth at a scale that commands the room.</div>
         <div class="edition-meta">
           <div class="edition-details">Series I · Edition of 100<br>40 × 60 in · Polished Aluminum</div>
           <div class="edition-price"><div class="from">From</div>$12,000</div>
         </div>
       </div>
     </div>
+
     <div class="edition-card reveal" style="transition-delay:.1s">
       <div class="edition-image">
         <div class="edition-image-label">Flective Edition · Lunar Series</div>
       </div>
       <div class="edition-info">
         <div class="edition-title">Aldrin, Tranquility Base</div>
+        <div class="edition-note">A surface that reflects light to construct an image of a man who stood on a surface that reflected none.</div>
         <div class="edition-meta">
           <div class="edition-details">Series I · Edition of 100<br>48 × 48 in · Polished Aluminum</div>
           <div class="edition-price"><div class="from">From</div>$14,500</div>
         </div>
       </div>
     </div>
+
     <div class="edition-card reveal" style="transition-delay:.25s">
       <div class="edition-image">
         <div class="edition-image-label">Flective Edition · Landscape Series</div>
       </div>
       <div class="edition-info">
         <div class="edition-title">Bryce Canyon — Meridian</div>
+        <div class="edition-note">Stone color that shifts with the hour. The medium renders it differently in morning than in afternoon.</div>
         <div class="edition-meta">
           <div class="edition-details">Series I · Edition of 100<br>36 × 54 in · Brushed Aluminum</div>
           <div class="edition-price"><div class="from">From</div>$10,500</div>
         </div>
       </div>
     </div>
+
     <div class="edition-card reveal" style="transition-delay:.35s">
       <div class="edition-image">
         <div class="edition-image-label">Flective Edition · Abstract Series</div>
       </div>
       <div class="edition-info">
         <div class="edition-title">Light Field — Study III</div>
+        <div class="edition-note">An image composed entirely from the properties of the medium itself. No subject but light and geometry.</div>
         <div class="edition-meta">
           <div class="edition-details">Series I · Edition of 100<br>30 × 30 in · Polished Aluminum</div>
           <div class="edition-price"><div class="from">From</div>$7,500</div>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
 <!-- WHY -->
 <section class="why-section" id="compare">
   <div class="why-left">
-    <div class="section-overline">Why Pixel Crystal</div>
-    <h2>Nothing<br>compares.</h2>
+    <div class="section-overline">The Distinction</div>
+    <h2>A different<br>kind of object.</h2>
     <p>
-      The finest photographic prints, the most advanced display technology,
-      even the most acclaimed photographic artists — all operate within
-      constraints that Flective imaging simply does not have.
+      Most image-bearing objects are either static — a fixed mark on a fixed
+      surface — or powered: a screen that requires electricity to exist.
+      Pixel Crystal editions are neither. The surface is permanent and passive.
+      The image is responsive. That combination does not exist elsewhere.
     </p>
     <p>
-      The difference is not just luminance. It is the combination of
-      unlimited dynamic range, complete color fidelity from a designed source,
-      a surface that requires no electronics, and an image that responds
-      to the viewer in ways no static medium can.
+      The relevant qualities are not captured by comparing brightness numbers.
+      They are experienced in the presence of the work: in the way the image
+      holds its depth as you move, in the silence of a surface that requires
+      nothing to sustain itself, in the specificity of a piece made for
+      one location and one light field.
     </p>
     <p class="note">
-      Peter Lik's luminescence prints use concealed backlighting to achieve
-      luminous effect — an approach that requires continuous power and limits
-      the image to a fixed state. A Pixel Crystal edition uses a purpose-designed
-      color source to achieve luminance that exceeds it, with viewer-responsive
-      behavior and a surface that will never degrade.
+      Backlit photographic works, including those by artists such as Peter Lik,
+      achieve luminosity through a powered light source behind a translucent
+      print. A Pixel Crystal edition uses a similar principle of designed
+      illumination, but redirects it through a computationally structured
+      reflective surface — producing viewer-responsive behavior, a passive
+      substrate, and a fundamentally different optical result.
     </p>
   </div>
   <div class="comparison-table reveal">
     <div class="comp-header">
-      <span>Criterion</span>
+      <span>Property</span>
       <span class="highlight">Pixel Crystal</span>
       <span>Fine Art Photo Print</span>
-      <span>Luminescence / Backlit</span>
+      <span>Backlit / Luminescence</span>
     </div>
     <div class="comp-row">
       <div class="comp-attr">Dynamic range</div>
-      <div class="comp-val win">Unlimited</div>
-      <div class="comp-val loss">~300:1</div>
-      <div class="comp-val partial">~2,000:1</div>
+      <div class="comp-val win">Illumination-bounded</div>
+      <div class="comp-val loss">~300:1 reflective</div>
+      <div class="comp-val partial">Transmissive — fixed source</div>
     </div>
     <div class="comp-row">
-      <div class="comp-attr">Color fidelity</div>
-      <div class="comp-val win">Full — designed source</div>
-      <div class="comp-val partial">Print gamut</div>
-      <div class="comp-val partial">Display gamut</div>
+      <div class="comp-attr">Color source</div>
+      <div class="comp-val win">Designed, calibrated</div>
+      <div class="comp-val partial">Ambient / gallery light</div>
+      <div class="comp-val partial">Fixed backlight</div>
     </div>
     <div class="comp-row">
-      <div class="comp-attr">Surface power required</div>
+      <div class="comp-attr">Surface power</div>
       <div class="comp-val win">None</div>
       <div class="comp-val win">None</div>
       <div class="comp-val loss">Continuous</div>
     </div>
     <div class="comp-row">
-      <div class="comp-attr">Bright environment performance</div>
-      <div class="comp-val win">Optimal</div>
+      <div class="comp-attr">Bright environment</div>
+      <div class="comp-val win">Performs well</div>
       <div class="comp-val loss">Washes out</div>
       <div class="comp-val loss">Invisible</div>
     </div>
     <div class="comp-row">
-      <div class="comp-attr">Viewer-responsive behavior</div>
-      <div class="comp-val win">Yes — smooth transition</div>
+      <div class="comp-attr">Viewer-responsive</div>
+      <div class="comp-val win">Yes — continuous shift</div>
       <div class="comp-val loss">Static</div>
       <div class="comp-val loss">Static</div>
     </div>
     <div class="comp-row">
-      <div class="comp-attr">View-dependent imagery</div>
-      <div class="comp-val win">Yes — multiplexed</div>
-      <div class="comp-val loss">No</div>
-      <div class="comp-val loss">No</div>
+      <div class="comp-attr">View-dependent content</div>
+      <div class="comp-val win">Available — multiplexed</div>
+      <div class="comp-val loss">Not possible</div>
+      <div class="comp-val loss">Not possible</div>
     </div>
     <div class="comp-row">
       <div class="comp-attr">Surface longevity</div>
       <div class="comp-val win">Architectural</div>
-      <div class="comp-val partial">Decades w/ care</div>
-      <div class="comp-val loss">Component lifetime</div>
+      <div class="comp-val partial">Decades with care</div>
+      <div class="comp-val loss">Component-limited</div>
     </div>
     <div class="comp-row">
-      <div class="comp-attr">Patent-protected category</div>
-      <div class="comp-val win">Exclusive</div>
-      <div class="comp-val loss">Widely replicated</div>
-      <div class="comp-val loss">Widely replicated</div>
+      <div class="comp-attr">Patent protection</div>
+      <div class="comp-val win">7 issued US patents</div>
+      <div class="comp-val loss">Unprotected category</div>
+      <div class="comp-val loss">Unprotected category</div>
     </div>
   </div>
 </section>
@@ -899,27 +911,27 @@ h1 { animation: slidein .9s .4s both; }
 <!-- PROCESS -->
 <section class="process-section" id="process">
   <div class="section-overline reveal">The Making</div>
-  <h2 class="reveal">From designed light field<br>to permanent image.</h2>
+  <h2 class="reveal">From light field<br>to permanent surface.</h2>
   <div class="process-steps">
     <div class="process-step reveal">
       <div class="step-num">01</div>
       <div class="step-title">Light Source Design</div>
-      <div class="step-body">We design a custom color source tailored to your space — its color temperature, position, and intensity computed to feed the surface with a precisely characterized light field. Concealed or artistically integrated at installation.</div>
+      <div class="step-body">We design a color source tailored to the space — its color temperature, position, and character computed to feed the surface consistently across viewing conditions. The source is integrated into the installation, concealed or treated as an element of the work.</div>
     </div>
     <div class="process-step reveal" style="transition-delay:.1s">
       <div class="step-num">02</div>
       <div class="step-title">Computational Design</div>
-      <div class="step-body">AI-driven optimization solves the inverse optics problem — computing the exact tilt angle for each of thousands of mirror pixels to redirect the designed light field into your chosen image at full color and luminance fidelity.</div>
+      <div class="step-body">Optimization software solves the inverse optics problem: computing the tilt angle for each mirror pixel so that, together, they redirect the designed light field into the target image. The geometry is unique to each edition and each space.</div>
     </div>
     <div class="process-step reveal" style="transition-delay:.2s">
       <div class="step-num">03</div>
       <div class="step-title">5-Axis Fabrication</div>
-      <div class="step-body">The computed geometry is translated into CNC machining instructions. The surface is milled in high-grade aluminum alloy, electropolished, and finished with a hard protective coating that will not degrade.</div>
+      <div class="step-body">The computed surface geometry is translated into CNC machining instructions. The aluminum substrate is milled, electropolished, and finished with a protective hard coat. The surface is then complete — it requires nothing further to function.</div>
     </div>
     <div class="process-step reveal" style="transition-delay:.3s">
       <div class="step-num">04</div>
       <div class="step-title">Edition & Installation</div>
-      <div class="step-body">Your piece is numbered, registered in the Pixel Crystal ledger, and accompanied by a certificate of authenticity. Installation includes precise placement of the illumination system. The surface is permanent. No electronics. No expiration.</div>
+      <div class="step-body">Each piece is numbered and registered, with a certificate documenting the optical design parameters. Installation includes commissioning the illumination system for the specific space. The work is then in place — with no ongoing requirements of any kind.</div>
     </div>
   </div>
 </section>
@@ -928,14 +940,15 @@ h1 { animation: slidein .9s .4s both; }
 <section class="inquire-section" id="inquire">
   <div class="inquire-bg"></div>
   <div class="section-overline reveal">Acquire</div>
-  <h2 class="reveal">Commission your edition.</h2>
+  <h2 class="reveal">Begin with a conversation.</h2>
   <p class="sub reveal">
-    Each Pixel Crystal work begins with a conversation about your space,
-    your image, and your intentions. We work with collectors, interior designers,
-    architects, and institutions worldwide.
+    Each Pixel Crystal edition is made for a specific space and a specific
+    light field. We work with collectors, designers, architects, and
+    institutions to develop works appropriate to their context.
+    Inquiry is the natural starting point.
   </p>
   <div class="inquire-ctas reveal">
-    <a href="mailto:inquiry@pixelcrystal.com" class="btn-inquire">Begin Private Inquiry</a>
+    <a href="mailto:inquiry@pixelcrystal.com" class="btn-inquire">Private Inquiry</a>
     <a href="#editions" class="btn-inquire-ghost">View Current Editions</a>
   </div>
 </section>
@@ -944,7 +957,7 @@ h1 { animation: slidein .9s .4s both; }
 <footer>
   <div class="footer-brand">
     <div class="logo">Pixel <span>Crystal</span></div>
-    <p>Limited-edition artworks with the world's highest dynamic range and full color fidelity. The Flective medium — permanently encoded in polished aluminum.</p>
+    <p>Limited-edition works in polished aluminum, using computational reflective imaging to construct images of depth, color, and presence that conventional media do not produce.</p>
   </div>
   <div class="footer-col">
     <h4>Collection</h4>
@@ -960,7 +973,7 @@ h1 { animation: slidein .9s .4s both; }
     <ul>
       <li><a href="#medium">The Medium</a></li>
       <li><a href="#process">Process</a></li>
-      <li><a href="#compare">Why Pixel Crystal</a></li>
+      <li><a href="#compare">The Distinction</a></li>
       <li><a href="#">Patent Portfolio</a></li>
     </ul>
   </div>
@@ -968,8 +981,8 @@ h1 { animation: slidein .9s .4s both; }
     <h4>Contact</h4>
     <ul>
       <li><a href="mailto:inquiry@pixelcrystal.com">inquiry@pixelcrystal.com</a></li>
-      <li><a href="#">Private viewing by appointment</a></li>
-      <li><a href="#">Press & media</a></li>
+      <li><a href="#">Viewing by appointment</a></li>
+      <li><a href="#">Press & institutional</a></li>
     </ul>
   </div>
   <div class="footer-bottom">
@@ -979,7 +992,6 @@ h1 { animation: slidein .9s .4s both; }
 </footer>
 
 <script>
-// Custom cursor
 const cur = document.getElementById('cursor');
 const ring = document.getElementById('cursor-ring');
 let rx = 0, ry = 0, mx = 0, my = 0;
@@ -994,12 +1006,8 @@ document.querySelectorAll('a, button').forEach(el => {
   el.addEventListener('mouseenter', () => { cur.style.width='18px';cur.style.height='18px';ring.style.width='48px';ring.style.height='48px';ring.style.borderColor='rgba(201,169,110,.6)'; });
   el.addEventListener('mouseleave', () => { cur.style.width='8px';cur.style.height='8px';ring.style.width='32px';ring.style.height='32px';ring.style.borderColor='rgba(201,169,110,.4)'; });
 });
-
-// Nav scroll
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
-
-// Reveal on scroll
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
 }, { threshold: 0.1 });
