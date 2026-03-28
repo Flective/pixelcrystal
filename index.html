@@ -402,52 +402,24 @@ h2 {
   letter-spacing: .15em; text-transform: uppercase;
 }
 
-/* ── WHY / COMPARISON ── */
+/* ── THE DISTINCTION (full-width prose) ── */
 .why-section {
   background: var(--deep);
-  display: grid; grid-template-columns: 400px 1fr; gap: 0; padding: 0;
+  padding: 120px 80px;
 }
-.why-left {
-  padding: 100px 60px 100px 80px;
-  background: linear-gradient(135deg, #161614, #1a1a18);
-  border-right: 1px solid var(--border);
-  display: flex; flex-direction: column; justify-content: center;
+.why-inner {
+  max-width: 820px;
 }
-.why-left h2 { font-size: 46px; margin-bottom: 24px; }
-.why-left p {
-  font-family: var(--serif); font-size: 17px; font-style: italic;
-  color: var(--txt-dim); line-height: 1.78; margin-bottom: 28px;
+.why-inner h2 { font-size: clamp(38px, 3.5vw, 54px); margin-bottom: 32px; }
+.why-inner p {
+  font-family: var(--serif); font-size: 18px; font-style: italic;
+  color: var(--txt-dim); line-height: 1.78; margin-bottom: 24px;
 }
-.why-left .note {
-  font-size: 13px; color: var(--txt-dim); font-style: italic;
-  font-family: var(--serif);
-  border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.65;
+.why-inner .note {
+  font-family: var(--serif); font-size: 15px; font-style: italic;
+  color: var(--txt-dim); line-height: 1.72;
+  border-top: 1px solid var(--border); padding-top: 24px; margin-top: 8px;
 }
-.comparison-table {
-  padding: 64px 80px;
-  display: flex; flex-direction: column; justify-content: center;
-}
-.comp-header {
-  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
-  border-bottom: 1px solid var(--border); padding-bottom: 14px;
-}
-.comp-header span {
-  font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
-  color: var(--txt-dim); text-align: center; font-weight: 400;
-}
-.comp-header span:first-child { text-align: left; }
-.comp-header span.highlight { color: var(--gold); }
-.comp-row {
-  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
-  padding: 18px 0; border-bottom: 1px solid #202018; align-items: center;
-}
-.comp-row:hover { background: rgba(201,169,110,.025); }
-.comp-attr { font-family: var(--serif); font-size: 16px; color: var(--txt); font-style: italic; }
-.comp-val { text-align: center; font-family: var(--serif); font-size: 15px; color: var(--txt-dim); }
-.comp-val.win { color: var(--gold-lt); font-weight: 500; position: relative; }
-.comp-val.win::after { content: '✦'; display: block; font-size: 8px; color: var(--gold); margin-top: 2px; }
-.comp-val.loss { color: #484440; }
-.comp-val.partial { color: #726c64; }
 
 /* ── PROCESS ── */
 .process-section { background: var(--black); }
@@ -554,9 +526,7 @@ h1 { animation: slidein .9s .4s both; }
   .medium-section { grid-template-columns: 1fr; gap: 48px; }
   .editions-grid { grid-template-columns: 1fr 1fr; }
   .edition-card.large { grid-column: span 2; }
-  .why-section { grid-template-columns: 1fr; }
-  .why-left { border-right: none; border-bottom: 1px solid var(--border); padding: 60px 40px; }
-  .comparison-table { padding: 60px 40px; }
+  .why-section { padding: 80px 40px; }
   .process-steps { grid-template-columns: repeat(2, 1fr); }
   footer { grid-template-columns: 1fr 1fr; }
 }
@@ -654,12 +624,13 @@ h1 { animation: slidein .9s .4s both; }
       Thousands of mirror pixels, each tilted by computational design, redirect
       that light toward the viewer to construct an image with a depth and
       luminance that conventional media do not reach by the same means.
-      The surface itself is entirely passive: no electronics, no power draw,
-      no components subject to failure.
+      The image-bearing surface itself is entirely passive: no onboard electronics
+      or active components of any kind.
     </p>
     <div class="pullquote">
       "The light source is designed. The image is permanent.
-      What arrives at the eye is unlike what any print or screen produces."
+      What arrives at the eye is produced by a different means than
+      any print or screen."
     </div>
 
     <div class="inaugural-callout">
@@ -698,7 +669,7 @@ h1 { animation: slidein .9s .4s both; }
       <div class="spec-name">Surface Power</div>
       <div>
         <div class="spec-value highlight">None</div>
-        <div class="spec-note">The artwork surface is entirely passive — no electronics, no wiring</div>
+        <div class="spec-note">The image-bearing surface is entirely passive — no onboard electronics</div>
       </div>
     </div>
     <div class="spec-row">
@@ -725,8 +696,8 @@ h1 { animation: slidein .9s .4s both; }
     <div class="spec-row">
       <div class="spec-name">Longevity</div>
       <div>
-        <div class="spec-value highlight">Architectural timescale</div>
-        <div class="spec-note">No software, no components, no scheduled maintenance</div>
+        <div class="spec-value highlight">Long-term — passive surface</div>
+        <div class="spec-note">No software dependency, no onboard components requiring service</div>
       </div>
     </div>
     <div class="spec-row">
@@ -823,19 +794,20 @@ h1 { animation: slidein .9s .4s both; }
   </div>
 </section>
 
-<!-- WHY -->
+<!-- THE DISTINCTION -->
 <section class="why-section" id="compare">
-  <div class="why-left">
+  <div class="why-inner reveal">
     <div class="section-overline">The Distinction</div>
     <h2>A different<br>kind of object.</h2>
     <p>
       Most image-bearing objects are either static — a fixed mark on a fixed
       surface — or powered: a screen that requires electricity to exist.
       Pixel Crystal editions are neither. The surface is permanent and passive.
-      The image is responsive. That combination does not exist elsewhere.
+      The image is responsive. That combination is unusual among
+      image-based art objects.
     </p>
     <p>
-      The relevant qualities are not captured by comparing brightness numbers.
+      The relevant qualities are not captured by comparing specifications.
       They are experienced in the presence of the work: in the way the image
       holds its depth as you move, in the silence of a surface that requires
       nothing to sustain itself, in the specificity of a piece made for
@@ -847,64 +819,8 @@ h1 { animation: slidein .9s .4s both; }
       print. A Pixel Crystal edition uses a similar principle of designed
       illumination, but redirects it through a computationally structured
       reflective surface — producing viewer-responsive behavior, a passive
-      substrate, and a fundamentally different optical result.
+      image-bearing substrate, and a different optical character.
     </p>
-  </div>
-  <div class="comparison-table reveal">
-    <div class="comp-header">
-      <span>Property</span>
-      <span class="highlight">Pixel Crystal</span>
-      <span>Fine Art Photo Print</span>
-      <span>Backlit / Luminescence</span>
-    </div>
-    <div class="comp-row">
-      <div class="comp-attr">Dynamic range</div>
-      <div class="comp-val win">Illumination-bounded</div>
-      <div class="comp-val loss">~300:1 reflective</div>
-      <div class="comp-val partial">Transmissive — fixed source</div>
-    </div>
-    <div class="comp-row">
-      <div class="comp-attr">Color source</div>
-      <div class="comp-val win">Designed, calibrated</div>
-      <div class="comp-val partial">Ambient / gallery light</div>
-      <div class="comp-val partial">Fixed backlight</div>
-    </div>
-    <div class="comp-row">
-      <div class="comp-attr">Surface power</div>
-      <div class="comp-val win">None</div>
-      <div class="comp-val win">None</div>
-      <div class="comp-val loss">Continuous</div>
-    </div>
-    <div class="comp-row">
-      <div class="comp-attr">Bright environment</div>
-      <div class="comp-val win">Performs well</div>
-      <div class="comp-val loss">Washes out</div>
-      <div class="comp-val loss">Invisible</div>
-    </div>
-    <div class="comp-row">
-      <div class="comp-attr">Viewer-responsive</div>
-      <div class="comp-val win">Yes — continuous shift</div>
-      <div class="comp-val loss">Static</div>
-      <div class="comp-val loss">Static</div>
-    </div>
-    <div class="comp-row">
-      <div class="comp-attr">View-dependent content</div>
-      <div class="comp-val win">Available — multiplexed</div>
-      <div class="comp-val loss">Not possible</div>
-      <div class="comp-val loss">Not possible</div>
-    </div>
-    <div class="comp-row">
-      <div class="comp-attr">Surface longevity</div>
-      <div class="comp-val win">Long-term — no components</div>
-      <div class="comp-val partial">Decades with care</div>
-      <div class="comp-val loss">Component-limited</div>
-    </div>
-    <div class="comp-row">
-      <div class="comp-attr">Patent protection</div>
-      <div class="comp-val win">7 issued US patents</div>
-      <div class="comp-val loss">Unprotected category</div>
-      <div class="comp-val loss">Unprotected category</div>
-    </div>
   </div>
 </section>
 
@@ -931,7 +847,7 @@ h1 { animation: slidein .9s .4s both; }
     <div class="process-step reveal" style="transition-delay:.3s">
       <div class="step-num">04</div>
       <div class="step-title">Edition & Installation</div>
-      <div class="step-body">Each piece is numbered and registered, with a certificate documenting the optical design parameters. Installation includes commissioning the illumination system for the specific space. The work is then in place — with no ongoing requirements of any kind.</div>
+      <div class="step-body">Each piece is numbered and registered, with a certificate documenting the optical design parameters. Installation includes commissioning the illumination system for the specific space. The work is then in place — without software dependency or active surface maintenance.</div>
     </div>
   </div>
 </section>
